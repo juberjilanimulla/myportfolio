@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import "../styles/Navbar.css";
 import logo from "../assets/logo.svg";
 import nav_underline from "../assets/nav_underline.svg";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const Navbar = () => {
-  const [menu, setMenu] = useState("about");
+  const [menu, setMenu] = useState("home");
   return (
     <div className="navbar">
       <img src={logo} alt="" />
       <ul className="nav-menu">
         <li>
-          <AnchorLink className="anchor-link" offset={50} href="#home">
+          <AnchorLink className="anchor-link" href="#home">
             <p onClick={() => setMenu("home")}>Home</p>
           </AnchorLink>
           {menu === "home" ? <img src={nav_underline} alt="" /> : <></>}
@@ -40,7 +40,11 @@ const Navbar = () => {
           {menu === "contact" ? <img src={nav_underline} alt="" /> : <></>}
         </li>
       </ul>
-      <div className="nav-connect">Contact With Me</div>
+      <div className="nav-connect">
+        <AnchorLink className="anchor-link" offset={50} href="#contact">
+          Contact With Me
+        </AnchorLink>
+      </div>
     </div>
   );
 };
