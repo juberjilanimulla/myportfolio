@@ -2,19 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    margin: 20px 170px;
 }
-.navbar-img img{
-    height: 80px;
-    
-}
+
 .nav-menu {
 display: flex;
 align-items: center;
 list-style:none;
 gap:60px;
 font-size: 20px;
-
 }
 
 .nav-menu li a{
@@ -38,3 +34,14 @@ font-size: 20px;
     transform: scale(1.05);
 }
 
+.nav-menu li{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.nav-menu li img{
+  display: flex;
+  margin: auto;
+  
+}
